@@ -42,9 +42,9 @@ jobs:
           cp ui/dist/* ./internal/frontend/assets/
 
       - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v2
+        uses: goreleaser/goreleaser-action@v6
         with:
-          version: latest
+          version: "~> v2"
           args: release --clean
         env:
           GITHUB_TOKEN: ${{secrets.DAGU_GITHUB_TOKEN}}
